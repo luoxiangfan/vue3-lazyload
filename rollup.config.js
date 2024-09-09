@@ -3,7 +3,7 @@ const path = require('path')
 const fs = require('fs')
 const rollup = require('rollup')
 const { babel } = require('@rollup/plugin-babel')
-const { uglify } = require('rollup-plugin-uglify')
+const { uglify } = require('@blaumaus/rollup-plugin-uglify')
 const { nodeResolve } = require('@rollup/plugin-node-resolve')
 const commonjs = require('@rollup/plugin-commonjs')
 const typescript = require('@rollup/plugin-typescript')
@@ -18,8 +18,7 @@ const banner
   + ' */\n'
 
 const external = [
-  'vue',
-  '@vue/composition-api',
+  'vue'
 ]
 
 const commonPlugin = [
