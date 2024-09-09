@@ -11,9 +11,9 @@ A vue3 image lazyload plugin.
 
 ## Installation
 ```sh
-$ npm i vue3-lazyload
+$ npm i @lxf2513/vue3-lazyload
 # or
-$ yarn add vue3-lazyload
+$ yarn add @lxf2513/vue3-lazyload
 ```
 
 ## Usage
