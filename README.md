@@ -1,48 +1,22 @@
 # vue3-lazyload
 
-<div style="display:flex;width:100%;justify-content:center;">
-<img src="https://img.shields.io/npm/v/vue3-lazyload" />
-<img src="https://img.shields.io/github/package-json/dependency-version/murongg/vue3-lazyload/dev/rollup/develop" />
-<img src="https://img.shields.io/npm/dw/vue3-lazyload" />
-</div>
 <br />
-<div style="display:flex;width:100%;justify-content:center;">
-<img src="https://img.shields.io/travis/murongg/vue3-lazyload" />
-<img src="https://img.shields.io/bundlephobia/min/vue3-lazyload" />
-<img src="https://img.shields.io/github/repo-size/murongg/vue3-lazyload" />
-<img src="https://img.shields.io/npm/l/vue3-lazyload" />
-<img src="https://img.shields.io/github/issues/murongg/vue3-lazyload" />
-<img src="https://img.shields.io/github/issues-pr/murongg/vue3-lazyload" />
-</div>
-<br />
-A vue3.x image lazyload plugin.  
+A vue3 image lazyload plugin.  
 <br />
 
-## 🚀 Features
-- ⚡ **0 dependencies:** No worry about your bundle size
-- 🦾 **Type Strong:** Written in Typescript
-- 🌎 **Browser support:** Use it through CDN
-- 😊 **Support Hook:** useLazyload
+## Features
+- **0 dependencies:** No worry about your bundle size
+- **Type Strong:** Written in Typescript
+- **Support Hook:** useLazyload
 
-## 📎 Installation
+## Installation
 ```sh
 $ npm i vue3-lazyload
 # or
 $ yarn add vue3-lazyload
 ```
 
-## 🌎 CDN
-
-CDN:  https://unpkg.com/vue3-lazyload
-```html
-<script src="https://unpkg.com/vue3-lazyload"></script>
-<script>
-  Vue.createApp(App).use(VueLazyLoad)
-  ...
-</script>
-```
-
-## 👽 Usage
+## Usage
 
 main.js:
 
@@ -213,7 +187,7 @@ Set delay in object parameter:
 </template>
 ```
 
-## 📁 Options
+## Options
 
 | key             | description                                                             | default                               | type                                                                                                          |
 | --------------- | ----------------------------------------------------------------------- | ------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
@@ -225,14 +199,10 @@ Set delay in object parameter:
 | lifecycle       | Specify state execution function                                        | -                                     | [Lifecycle](#Lifecycle)                                                                                       |
 | delay           | Time in milliseconds an image has to stay visible before loading starts | 0                                     | number                                                                                                        |
 
-## ⛱ Lifecycle Hooks
+## Lifecycle Hooks
 
 | key     | description      |
 | ------- | ---------------- |
 | loading | Image loading    |
 | loaded  | Image loaded     |
 | error   | Image load error |
-
-## [Contributors](https://github.com/murongg/vue3-lazyload/graphs/contributors)
-
-![Contributors](https://contrib.rocks/image?repo=murongg/vue3-lazyload)
