@@ -4,10 +4,10 @@
   "packageManager": "pnpm@9.9.0",
   "description": "A Vue3.x image lazyload plugin",
   "license": "MIT",
-  "author": "木荣 <admin@imuboy.cn>",
+  "author": "木荣 <admin@imuboy.cn>, lxf <infiniment@163.com>",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/murongg/vue3-lazyload.git"
+    "url": "git+https://github.com/luoxiangfan/vue3-lazyload.git"
   },
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
@@ -83,13 +83,5 @@
   "lint-staged": {
     "*": "pnpm run lint:fix"
   },
-  "bugs": {
-    "url": "https://github.com/murongg/vue3-lazyload/issues"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
-  },
-  "homepage": "https://github.com/murongg/vue3-lazyload#readme"
+  "homepage": "https://github.com/luoxiangfan/vue3-lazyload#readme"
 }
