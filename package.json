@@ -31,6 +31,7 @@
   "files": [
     "dist"
   ],
+  "keywords": ["vue", "vue3", "image", "img", "lazyload"],
   "sideEffects": false,
   "scripts": {
     "build": "rimraf dist && unbuild && npm run rollup:build",
