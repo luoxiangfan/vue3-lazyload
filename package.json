@@ -1,5 +1,5 @@
 {
-  "name": "vue3-lazyload",
+  "name": "@lxf2513/vue3-lazyload",
   "version": "1.0.0",
   "packageManager": "pnpm@9.9.0",
   "description": "A Vue3.x image lazyload plugin",
@@ -40,7 +40,7 @@
     "lint:fix": "eslint . --fix",
     "demo:dev": "vite",
     "demo:build": "vite build",
-    "prepublishOnly": "nr build",
+    "prepublishOnly": "npm run build",
     "release": "bumpp --commit --push --tag && pnpm publish",
     "start": "esno src/index.ts",
     "test": "vitest",
