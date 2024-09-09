@@ -55,6 +55,7 @@
   "devDependencies": {
     "@babel/core": "^7.25.2",
     "@babel/types": "^7.25.6",
+    "@blaumaus/rollup-plugin-uglify": "^7.0.1",
     "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-commonjs": "^26.0.1",
     "@rollup/plugin-node-resolve": "^15.2.3",
@@ -72,7 +73,7 @@
     "prettier": "^3.3.3",
     "rimraf": "^6.0.1",
     "rollup": "^4.21.2",
-    "@blaumaus/rollup-plugin-uglify": "^7.0.1",
+    "tslib": "^2.7.0",
     "typescript": "^5.5.4",
     "unbuild": "^2.0.0",
     "vite": "^5.4.3",
@@ -82,7 +83,6 @@
   "lint-staged": {
     "*": "pnpm run lint:fix"
   },
-  "typings": "types/index.d.ts",
   "bugs": {
     "url": "https://github.com/murongg/vue3-lazyload/issues"
   },

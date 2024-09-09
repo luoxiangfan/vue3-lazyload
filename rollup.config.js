@@ -3,19 +3,10 @@ const path = require('path')
 const fs = require('fs')
 const rollup = require('rollup')
 const { babel } = require('@rollup/plugin-babel')
-const { uglify } = require('rollup-plugin-uglify')
+const { uglify } = require('@blaumaus/rollup-plugin-uglify')
 const { nodeResolve } = require('@rollup/plugin-node-resolve')
 const commonjs = require('@rollup/plugin-commonjs')
 const typescript = require('@rollup/plugin-typescript')
-const version = require('./package.json').version
-
-const banner
-  = '/*!\n'
-  + ` * Vue3-Lazyload.js v${version}\n`
-  + ' * A Vue3.x image lazyload plugin' + '\n'
-  + ` * (c) ${new Date().getFullYear()} MuRong <admin@imuboy.cn>\n`
-  + ' * Released under the MIT License.\n'
-  + ' */\n'
 
 const external = [
   'vue'
@@ -23,7 +14,7 @@ const external = [
 
 const commonPlugin = [
   commonjs(),
-  babel(),
+  babel({ babelHelpers: 'bundled' }),
   typescript(),
   nodeResolve(),
 ]
@@ -34,6 +25,10 @@ async function build(options, outputOptions) {
     const { output } = await bundle.generate({
       format: outputOptions.format,
       name: 'VueLazyload',
+      globals: {
+        vue: 'vue'
+      },
+      exports: 'named'
     })
     exists()
     await write(path.resolve(__dirname, outputOptions.filename), output[0].code)
@@ -53,7 +48,6 @@ function blue(str) {
 
 function write(dest, code) {
   return new Promise((resolve, reject) => {
-    code = banner + code
     fs.writeFile(dest, code, (err) => {
       if (err)
         return reject(err)
