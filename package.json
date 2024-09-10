@@ -1,5 +1,5 @@
 {
-  "name": "@lxf2513/vue3-lazyload",
+  "name": "vue3-img-lazyload",
   "version": "1.0.6",
   "packageManager": "pnpm@9.9.0",
   "description": "Vue3 image lazyload",
