@@ -47,9 +47,6 @@
     "test": "vitest",
     "typecheck": "tsc --noEmit"
   },
-  "peerDependencies": {
-    "vue": "latest"
-  },
   "dependencies": {
     "vue-demi": "^0.14.10"
   },
