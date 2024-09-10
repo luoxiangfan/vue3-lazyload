@@ -48,7 +48,7 @@
     "typecheck": "tsc --noEmit"
   },
   "peerDependencies": {
-    "vue": ">=3"
+    "vue": "latest"
   },
   "dependencies": {
     "vue-demi": "^0.14.10"
