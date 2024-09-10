@@ -7,6 +7,15 @@ const { uglify } = require('@blaumaus/rollup-plugin-uglify')
 const { nodeResolve } = require('@rollup/plugin-node-resolve')
 const commonjs = require('@rollup/plugin-commonjs')
 const typescript = require('@rollup/plugin-typescript')
+const version = require('./package.json').version
+
+const banner
+  = '/*!\n'
+  + ` * Vue3-Lazyload.js v${version}\n`
+  + ' * A Vue3.x image lazyload plugin' + '\n'
+  + ` * (c) ${new Date().getFullYear()} MuRong <admin@imuboy.cn>\n`
+  + ' * Released under the MIT License.\n'
+  + ' */\n'
 
 const external = [
   'vue'
@@ -48,6 +57,7 @@ function blue(str) {
 
 function write(dest, code) {
   return new Promise((resolve, reject) => {
+    code = banner + code
     fs.writeFile(dest, code, (err) => {
       if (err)
         return reject(err)
