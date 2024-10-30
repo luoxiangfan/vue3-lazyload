@@ -1,16 +1,16 @@
-/* eslint-disable no-console */
 const path = require('path')
 const fs = require('fs')
-const rollup = require('rollup')
+const { rollup } = require('rollup')
 const { babel } = require('@rollup/plugin-babel')
 const { uglify } = require('@blaumaus/rollup-plugin-uglify')
 const { nodeResolve } = require('@rollup/plugin-node-resolve')
 const commonjs = require('@rollup/plugin-commonjs')
 const typescript = require('@rollup/plugin-typescript')
-const version = require('./package.json').version
+const { version } = require('./package.json')
 
 const banner
-  = '/*!\n'
+  = '/* eslint-disable */\n'
+  + '/*!\n'
   + ` * Vue3-Lazyload.js v${version}\n`
   + ' * A Vue3.x image lazyload plugin' + '\n'
   + ` * (c) ${new Date().getFullYear()} MuRong <admin@imuboy.cn>\n`
@@ -30,7 +30,7 @@ const commonPlugin = [
 
 async function build(options, outputOptions) {
   try {
-    const bundle = await rollup.rollup(options)
+    const bundle = await rollup(options)
     const { output } = await bundle.generate({
       format: outputOptions.format,
       name: 'VueLazyload',
@@ -62,7 +62,7 @@ function write(dest, code) {
       if (err)
         return reject(err)
       console.log(`${blue(dest)} ${getSize(code)}`)
-      resolve()
+      resolve('')
     })
   })
 }
