@@ -1,4 +1,4 @@
-import type { App } from 'vue-demi'
+import type { App } from 'vue'
 import Lazy from './lazy'
 import type { LazyOptions } from './types'
 export * from './hooks'

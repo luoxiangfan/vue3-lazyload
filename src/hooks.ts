@@ -1,5 +1,5 @@
-import type { Ref } from 'vue-demi'
-import { onMounted, onUnmounted, ref, watch } from 'vue-demi'
+import type { Ref } from 'vue'
+import { onMounted, onUnmounted, ref, watch } from 'vue'
 import Lazy from './lazy'
 import type { LazyOptions } from './types'
 

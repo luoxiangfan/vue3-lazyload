@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 /* eslint-disable @typescript-eslint/no-empty-function */
 /* eslint-disable no-console */
-import type { DirectiveBinding } from 'vue-demi'
+import type { DirectiveBinding } from 'vue'
 import type { LazyOptions, Lifecycle, ValueFormatterObject } from './types'
 import { LifecycleEnum } from './types'
 import { assign, hasIntersectionObserver, isObject } from './util'
