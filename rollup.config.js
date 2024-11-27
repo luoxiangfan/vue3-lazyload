@@ -1,12 +1,15 @@
-const path = require('path')
-const fs = require('fs')
-const { rollup } = require('rollup')
-const { babel } = require('@rollup/plugin-babel')
-const { uglify } = require('@blaumaus/rollup-plugin-uglify')
-const { nodeResolve } = require('@rollup/plugin-node-resolve')
-const commonjs = require('@rollup/plugin-commonjs')
-const typescript = require('@rollup/plugin-typescript')
-const { version } = require('./package.json')
+import path from 'path'
+import fs from 'fs'
+import process from 'node:process'
+import { rollup } from 'rollup'
+import { babel } from '@rollup/plugin-babel'
+import { uglify } from '@blaumaus/rollup-plugin-uglify'
+import { nodeResolve } from '@rollup/plugin-node-resolve'
+import commonjs from '@rollup/plugin-commonjs'
+import typescript from '@rollup/plugin-typescript'
+import packageConfig from './package.json' with { type: 'json' }
+
+const { version } = packageConfig
 
 const banner
   = '/* eslint-disable */\n'
@@ -16,6 +19,8 @@ const banner
   + ` * (c) ${new Date().getFullYear()} MuRong <admin@imuboy.cn>\n`
   + ' * Released under the MIT License.\n'
   + ' */\n'
+
+const dirname = process.cwd()
 
 const external = [
   'vue'
@@ -40,7 +45,7 @@ async function build(options, outputOptions) {
       exports: 'named'
     })
     exists()
-    await write(path.resolve(__dirname, outputOptions.filename), output[0].code)
+    await write(path.resolve(dirname, outputOptions.filename), output[0].code)
   }
   catch (e) {
     console.error(e)
@@ -68,13 +73,13 @@ function write(dest, code) {
 }
 
 function exists() {
-  const pathE = path.resolve(__dirname, 'dist/')
+  const pathE = path.resolve(dirname, 'dist/')
   if (!fs.existsSync(pathE))
     fs.mkdirSync(pathE)
 }
 
 build({
-  input: path.resolve(__dirname, 'src/index.ts'),
+  input: path.resolve(dirname, 'src/index.ts'),
   plugins: [
     ...commonPlugin,
     uglify(),
