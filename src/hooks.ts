@@ -15,7 +15,7 @@ export function useLazyload(src: Ref<string>, options?: LazyOptions): Ref<HTMLEl
     lazyRef.value && lazy.unmount(lazyRef.value)
   })
 
-  watch(src, (newVal: string) => {
+  watch(src, (newVal) => {
     if (src.value)
       lazy.update(lazyRef.value as HTMLElement, newVal)
   })
