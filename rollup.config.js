@@ -7,13 +7,13 @@ import { uglify } from '@blaumaus/rollup-plugin-uglify'
 import { nodeResolve } from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
 import typescript from '@rollup/plugin-typescript'
-import packageConfig from './package.json' with { type: 'json' }
+const loadJSON = (path) =>
+  JSON.parse(fs.readFileSync(new URL(path, import.meta.url)))
 
-const { version } = packageConfig
+const { version } = loadJSON('./package.json')
 
 const banner
-  = '/* eslint-disable */\n'
-  + '/*!\n'
+  = '/*!\n'
   + ` * Vue3-Lazyload.js v${version}\n`
   + ' * A Vue3.x image lazyload plugin' + '\n'
   + ` * (c) ${new Date().getFullYear()} MuRong <admin@imuboy.cn>\n`

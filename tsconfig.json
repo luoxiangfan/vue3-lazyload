@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
-    "target": "es2017",
-    "module": "esnext",
+    "target": "ESNext",
+    "module": "Preserve",
     "lib": ["esnext", "DOM", "DOM.Iterable"],
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "declaration": true,
     "declarationDir": "./types",
     "esModuleInterop": true,
@@ -13,5 +13,6 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "jsx": "preserve"
-  }
+  },
+  "exclude": ["node_modules/**/*", "dist/**/*"]
 }
