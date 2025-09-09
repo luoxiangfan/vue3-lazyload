@@ -50,7 +50,7 @@
     "prepublishOnly": "npm run build",
     "release": "bumpp --commit --push --tag && npm publish",
     "start": "esno src/index.ts",
-    "test": "vitest",
+    "test": "vitest --environment jsdom",
     "type-check": "tsc --strict --noEmit"
   },
   "peerDependencies": {
@@ -74,6 +74,7 @@
     "esno": "^4.8.0",
     "globals": "^16.3.0",
     "happy-dom": "^18.0.1",
+    "jsdom": "^26.1.0",
     "lint-staged": "^16.1.6",
     "prettier": "^3.6.2",
     "rollup": "^4.50.1",

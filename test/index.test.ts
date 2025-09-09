@@ -1,7 +1,7 @@
 import type { App } from 'vue'
 import { createApp, inject } from 'vue'
 import { beforeEach, describe, expect, it } from 'vitest'
-import LazyLoad from '../src'
+import { VueLazyLoad } from '../src'
 import Lazy from '../src/lazy'
 
 const AppContanier = {
@@ -19,7 +19,7 @@ const options = {
 describe('Vue3-lazyload Test', () => {
   beforeEach(() => {
     app = createApp(AppContanier)
-    app.use(LazyLoad, options)
+    app.use(VueLazyLoad, options)
     $Lazyload = app.config.globalProperties.$Lazyload
   })
   it('install', () => {
@@ -47,6 +47,6 @@ describe('Vue3-lazyload Test', () => {
       },
     }
     const root = document.createElement('div')
-    createApp(component).use(LazyLoad, options).mount(root)
+    createApp(component).use(VueLazyLoad, options).mount(root)
   })
 })
