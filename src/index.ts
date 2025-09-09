@@ -3,7 +3,7 @@ import Lazy from './lazy'
 import type { LazyOptions } from './types'
 export * from './hooks'
 
-export default {
+export const VueLazyLoad = {
   /**
    * install plugin
    *

@@ -42,7 +42,7 @@ export default class Lazy {
    * @param {*} [options={}]
    * @memberof Lazy
    */
-  public config(options = {}): void {
+  public config(options: any = {}): void {
     assign(this.options, options)
   }
 
