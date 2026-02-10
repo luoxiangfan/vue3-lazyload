@@ -14,7 +14,7 @@ updates:
     # 为目标分支创建 PR，默认为默认分支
     target-branch: "main"
     # 版本更新策略
-    versioning-strategy: increase-if-necessary
+    versioning-strategy: increase
     # 添加标签和审查者
     labels:
       - "dependencies"
