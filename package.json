@@ -60,7 +60,7 @@
     "@babel/core": "^7.28.5",
     "@babel/types": "^7.28.5",
     "@blaumaus/rollup-plugin-uglify": "^7.0.1",
-    "@eslint/js": "^9.39.1",
+    "@eslint/js": "^10.0.1",
     "@rollup/plugin-babel": "^6.1.0",
     "@rollup/plugin-commonjs": "^29.0.0",
     "@rollup/plugin-node-resolve": "^16.0.3",
