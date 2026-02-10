@@ -30,11 +30,3 @@ updates:
       npm-minor:
         patterns: ["*"]
         update-types: ["minor"]
-
-    # 忽略特定更新（按需修改）
-    ignore:
-      # 忽略某个包的所有更新
-      - dependency-name: "nuxt"
-      # 忽略某个包的主要版本更新
-      - dependency-name: "nuxt"
-        update-types: ["version-update:semver-major"]
