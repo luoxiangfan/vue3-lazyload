@@ -23,6 +23,14 @@ updates:
     reviewers:
       - "luoxiangfan"
 
+    groups:
+      npm-patch:
+        patterns: ["*"]
+        update-types: ["patch"]
+      npm-minor:
+        patterns: ["*"]
+        update-types: ["minor"]
+
     # 忽略特定更新（按需修改）
     ignore:
       # 忽略某个包的所有更新
