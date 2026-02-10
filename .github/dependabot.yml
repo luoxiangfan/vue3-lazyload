@@ -1,0 +1,38 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      # 每周一 UTC 时间 9:00 检查 (北京时间 17:00)
+      day: "monday"
+      time: "09:00"
+      # 设置时区 (仅某些GitHub版本支持)
+      timezone: "Asia/Shanghai"
+    # 允许最多同时打开 3 个 PR，避免过多
+    open-pull-requests-limit: 3
+    # 为目标分支创建 PR，默认为默认分支
+    target-branch: "main"
+    # 版本更新策略
+    versioning-strategy: increase-if-necessary
+    # 添加标签和审查者
+    labels:
+      - "dependencies"
+    assignees:
+      - "luoxiangfan"
+    reviewers:
+      - "luoxiangfan"
+
+    # 分组配置：将次要版本和补丁版本更新打包
+    groups:
+      all-minor-patch:
+        patterns: ["*"]
+        update-types: ["minor", "patch"]
+
+    # 忽略特定更新（按需修改）
+    ignore:
+      # 忽略某个包的所有更新
+      - dependency-name: "nuxt"
+      # 忽略某个包的主要版本更新
+      - dependency-name: "nuxt"
+        update-types: ["version-update:semver-major"]

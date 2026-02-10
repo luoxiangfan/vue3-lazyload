@@ -1,0 +1,28 @@
+name: Dependabot 自动合并
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+permissions:
+  contents: write
+  pull-requests: write
+  checks: read
+
+jobs:
+  auto-merge:
+    if: github.actor == 'dependabot[bot]'
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 自动合并
+        if: steps.wait-and-check.outputs.all_passed == 'true'
+        run: |
+          # 使用 GitHub CLI 合并
+          gh pr merge ${{ github.event.pull_request.number }} \
+            --auto \
+            --squash \
+            --subject "chore(deps): 自动合并 Dependabot 更新"
+          
+          echo "✅ PR 已自动合并"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
