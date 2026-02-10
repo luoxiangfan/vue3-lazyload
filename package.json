@@ -70,7 +70,7 @@
     "@vue/eslint-config-typescript": "^14.6.0",
     "@vue/test-utils": "^2.4.6",
     "bumpp": "^10.3.1",
-    "eslint": "^9.39.1",
+    "eslint": "^10.0.0",
     "esno": "^4.8.0",
     "globals": "^16.5.0",
     "happy-dom": "^20.0.10",
