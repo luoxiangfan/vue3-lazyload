@@ -73,7 +73,7 @@
     "eslint": "^10.0.1",
     "esno": "^4.8.0",
     "globals": "^17.3.0",
-    "happy-dom": "^20.6.1",
+    "happy-dom": "^20.7.0",
     "jsdom": "^28.1.0",
     "lint-staged": "^16.2.6",
     "prettier": "^3.6.2",
