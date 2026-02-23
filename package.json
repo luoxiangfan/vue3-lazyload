@@ -67,7 +67,7 @@
     "@rollup/plugin-typescript": "^12.3.0",
     "@types/node": "^25.3.0",
     "@vitejs/plugin-vue": "^6.0.1",
-    "@vue/eslint-config-typescript": "^14.6.0",
+    "@vue/eslint-config-typescript": "^14.7.0",
     "@vue/test-utils": "^2.4.6",
     "bumpp": "^10.3.1",
     "eslint": "^10.0.1",
