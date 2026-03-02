@@ -75,7 +75,7 @@
     "globals": "^17.4.0",
     "happy-dom": "^20.7.0",
     "jsdom": "^28.1.0",
-    "lint-staged": "^16.2.6",
+    "lint-staged": "^16.3.1",
     "prettier": "^3.6.2",
     "rollup": "^4.59.0",
     "tslib": "^2.8.1",
