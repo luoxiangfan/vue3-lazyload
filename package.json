@@ -61,7 +61,7 @@
     "@babel/types": "^7.28.5",
     "@blaumaus/rollup-plugin-uglify": "^7.0.1",
     "@eslint/js": "^10.0.1",
-    "@rollup/plugin-babel": "^6.1.0",
+    "@rollup/plugin-babel": "^7.0.0",
     "@rollup/plugin-commonjs": "^29.0.2",
     "@rollup/plugin-node-resolve": "^16.0.3",
     "@rollup/plugin-typescript": "^12.3.0",
