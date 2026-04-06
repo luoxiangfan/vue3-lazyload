@@ -65,7 +65,7 @@
     "@rollup/plugin-commonjs": "^29.0.2",
     "@rollup/plugin-node-resolve": "^16.0.3",
     "@rollup/plugin-typescript": "^12.3.0",
-    "@types/node": "^25.5.0",
+    "@types/node": "^25.5.2",
     "@vitejs/plugin-vue": "^6.0.5",
     "@vue/eslint-config-typescript": "^14.7.0",
     "@vue/test-utils": "^2.4.6",
@@ -77,13 +77,13 @@
     "jsdom": "^29.0.1",
     "lint-staged": "^16.4.0",
     "prettier": "^3.6.2",
-    "rollup": "^4.60.0",
+    "rollup": "^4.60.1",
     "tslib": "^2.8.1",
     "typescript": "^6.0.2",
     "unbuild": "^3.6.1",
     "vite": "^8.0.3",
     "vitest": "^4.1.2",
-    "vue": "^3.5.31"
+    "vue": "^3.5.32"
   },
   "lint-staged": {
     "*": "npm run lint:fix"
