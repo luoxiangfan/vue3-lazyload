@@ -58,7 +58,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.29.7",
-    "@babel/types": "^7.28.5",
+    "@babel/types": "^8.0.0",
     "@blaumaus/rollup-plugin-uglify": "^7.0.1",
     "@eslint/js": "^10.0.1",
     "@rollup/plugin-babel": "^7.1.0",
